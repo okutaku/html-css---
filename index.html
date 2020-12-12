@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,6 +19,21 @@
         <li><a href="">お問い合わせ</a></li>
       </ul>
     </nav>
+
+    <div class="sp-menu">
+      <span class="material-icons" id="head_open">menu</span>
+    </div>
+    
+    <div class="overlay2">
+      <span class="material-icons" id="head_close">close</span>
+        <nav>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+          </ul>
+        </nav>
+    </div>
     
   </header>
   <main>
@@ -142,22 +158,35 @@
           <a href="https://works1">https://works1</a><br>
           <p>HTML/CSS</p>
           <p>HTML / CSSで自己紹介サイトの制作をしました。CSSでモーダルウィンドウ を実装しました。</p>
-          <p>詳細を見る</p>
+          <div id ="open"> 詳細を見る</div>
           <div class="number"align="right">#01</div>
         </li>
+
         <li><img src="imgアセット/1.jpg"><br>
           <p>制作物</p>
           <a href="https://works1">https://works1</a><br>
           <p>HTML/CSS</p>
           <p>HTML / CSSで自己紹介サイトの制作をしました。CSSでモーダルウィンドウ を実装しました。</p>
-          <p>詳細を見る</p>
+          <div id ="open">詳細を見る</div>
           <div class="number"align="right">#01</div>
         </li>
+
         <li><img src="imgアセット/1.jpg"><br>
           <p>制作物</p>
           <a href="https://works1">https://works1</a><br>
           <p>HTML/CSS</p>
           <p>HTML / CSSで自己紹介サイトの制作をしました。CSSでモーダルウィンドウ を実装しました。</p>
+          <div id ="open">詳細を見る</div>
+          
+          <div id="mask" class="hidden"></div>
+
+          <section id="modal" class="hidden">
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+            <div id="close">
+              閉じる
+            </div>
+          </section>
+
           <div class="number"align="right">#01</div>
         </li>
       </ul>
@@ -262,5 +291,7 @@
     </ul>
     <p>takuro okuyama All Right Reserved,</p>
   </footer>
+  <script src="js/modal.js"></script>
+  <script src="js/humberger.js"></script>
 </body>
 </html>
