@@ -348,9 +348,6 @@ table td{
   padding: 20px;
   border-radius: 4px;
   position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
   margin: 0 auto;
   transition: transform 0.3s;
   z-index: 2;
@@ -362,7 +359,10 @@ table td{
 
 #modal.hidden {
   transform: translate(0, -500px);
-}
+  display: none;
+} 
+
+/* 経歴 */
 
 .works_description ul li a{
   padding-left: 20px;
