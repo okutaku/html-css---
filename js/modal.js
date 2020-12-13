@@ -1,12 +1,25 @@
 'use strict';
 
 {
-  const open = document.getElementById('open')
-  const close = document.getElementById('close')
+  const open3 = document.getElementById('open3')
+  const open4 = document.getElementById('open4')
+  const open5 = document.getElementById('open5')
+  // const open = document.querySelectorAll();
+  const close = document.getElementById('close3')
   const modal = document.getElementById('modal')
   const mask = document.getElementById('mask')
 
-  open.addEventListener('click', () => {
+  open3.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  open4.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+
+  open5.addEventListener('click', () => {
     modal.classList.remove('hidden');
     mask.classList.remove('hidden');
   });

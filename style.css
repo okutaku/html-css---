@@ -327,7 +327,10 @@ table td{
 /* ハンバーガー終了 */
 
 /* モーダル */
-#open, #close{
+#open3,
+#open4,
+#open5,
+#close3{
   cursor: pointer;
   color:red;
 }
