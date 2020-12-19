@@ -55,12 +55,12 @@ header nav ul li a{
 }
 
 header nav ul li a:hover{
-  color:pink;
+  color:orange;
+  transition: all 0.3s;
 }
 
 /* fvここから */
 .firstview{
-  background: skyblue;
   height: 664px;
   width: 100%;
   display: flex;
@@ -69,12 +69,12 @@ header nav ul li a:hover{
   background-image: url("imgアセット//1stview.png");
   z-index: 1;
   background-repeat: no-repeat;
-  background-size: 100% 664px;
+  background-size: 100% auto;
 }
 
 .f_con{
-  height: 100px;
-  width: 400px;
+  height: auto;
+  width: auto;
   color: white;
   z-index: 3;
 }
@@ -85,11 +85,80 @@ header nav ul li a:hover{
   top: 60px;
   left: 0;
   right: 0;
-  height: 664px;
+  height: auto;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
+
+/* ハンバーガー */
+#head_open{
+  color:orange;
+  cursor: pointer;
+}
+
+.overlay2{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:rgb(195, 237, 253);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  /* 最初は非表示のため０にしておく */
+  pointer-events: none;
+  transition: opacity .6s;
+  z-index: 4;
+}
+
+.overlay2.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay2 #head_close {
+  position: absolute;
+  top: 13px;
+  right: 40px;
+  font-size: 32px;
+  cursor: pointer;
+  color:orange;
+}
+
+.overlay2 ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.overlay2 li {
+  margin-top: 24px;
+  font-size:20px;
+  margin: 50px auto;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay2.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay2.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay2.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay2.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+/* fvハンバーガー終了 */
 
 /* 自己紹介ここから */
 .aboutme{
@@ -106,18 +175,19 @@ header nav ul li a:hover{
 
 
 .aboutme_img img{
-  height: 333px;
-  width: 530px;
+  width: 500px;
+  height: 400px;
   border-radius: 5px;
 }
 
 .aboutme_content {
-  height: 333px;
-  width: 530px;
-  background: red;
+  height: 380px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  padding: 10px;
+  margin-left: 20px;
 }
 
 .aboutme_content ul{  
@@ -147,7 +217,6 @@ transition: all 0.3s pink;
 .skill h2{
   font-size: 50px;
   margin-bottom: 0px;
-  background:red;
 }
 
 .skill_content{
@@ -257,74 +326,6 @@ table td{
 }
 
 
-/* ハンバーガー */
-#head_open{
-  color:orange;
-  cursor: pointer;
-}
-
-.overlay2{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background:rgb(195, 237, 253);
-  text-align: center;
-  padding: 64px;
-  opacity: 0;
-  /* 最初は非表示のため０にしておく */
-  pointer-events: none;
-  transition: opacity .6s;
-  z-index: 4;
-}
-
-.overlay2.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.overlay2 #head_close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 32px;
-  cursor: pointer;
-  color:orange;
-}
-
-.overlay2 ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.overlay2 li {
-  margin-top: 24px;
-  font-size:20px;
-  margin: 50px auto;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
-}
-
-.overlay2.show li {
-  opacity: 1;
-  transform: none;
-}
-
-.overlay2.show li:nth-child(1) {
-  transition-delay: .1s;
-}
-
-.overlay2.show li:nth-child(2) {
-  transition-delay: .2s;
-}
-
-.overlay2.show li:nth-child(3) {
-  transition-delay: .3s;
-}
-/* ハンバーガー終了 */
 
 /* モーダル */
 #open3,
