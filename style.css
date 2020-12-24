@@ -202,11 +202,6 @@ header nav ul li a:hover{
   padding: 0;
 }
 
-
-.aboutme_content ul li a svg path:hover{  
-transition: all 0.3s pink;
-}
-
 /* スキルここから */
 .skill{
   height: 684px;
@@ -284,7 +279,7 @@ table td{
 /* 仕事はここから */
 .works{
     height: 835px;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -292,29 +287,29 @@ table td{
 .works_title{
     font-size: 30px;
     margin-bottom: 0px;
-    background:red;
-}
-
-.works_description{
-  background:rgb(241, 241, 241);
-  height:550px;
 }
 
 .works_description ul{
-  width:100%;
-  height: 100%;
+  width:95%;
+  height: auto;
   display: flex;
   justify-content:space-around;
   list-style: none;
   padding: 0;
+  margin: 0 auto;
 }
 
 .works_description ul li{
-  height: 531px;
+  height: auto;
   border: 1px solid gray;
   border-radius: 5px;
   font-size:15px;
   margin-left: 15px;
+  padding-bottom: 10px;
+}
+
+.works_description ul li img{
+  margin: 0;
 }
 
 .works_description ul li:first-child{
@@ -334,6 +329,11 @@ table td{
 #close3{
   cursor: pointer;
   color:red;
+  padding-left: 5px;
+}
+
+#close3{
+  text-align: center;
 }
 
 #mask{
@@ -349,10 +349,15 @@ table td{
 #modal {
   background: #fff;
   width: 300px;
+  height: 150px;
   padding: 20px;
   border-radius: 4px;
-  position: absolute;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:  auto;
   transition: transform 0.3s;
   z-index: 2;
 }
@@ -385,7 +390,8 @@ table td{
 /* 経歴ここから */
 .timeline{
   background: rgb(223, 223, 223);
-  height: 1205px;
+  height: 900px;
+  width:100%;
   display: flex;
   flex-direction: column;
 }
@@ -396,11 +402,12 @@ table td{
 }
 
 .timeline_content{
-  width:100%;
+  width:95%;
   height: 300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position:relative;
 }
 
 .content_box{
@@ -453,7 +460,7 @@ table td{
 
 
 .content_box-body{
-  background:pink;
+  background:rgb(231, 209, 167);
   padding:10px;
 }
 
@@ -481,7 +488,7 @@ border: 1px dashed red;
 .contact form input {
   width: 100%;
   height: 50px;
-  background: pink;
+  background: rgb(255, 228, 179);
   border-style: none;
   margin-bottom: 40px;
   border-radius: 5px;
@@ -490,7 +497,7 @@ border: 1px dashed red;
 .contact form textarea {
   width: 100%;
   height: 150px;
-  background: pink;
+  background: rgb(255, 228, 179);
   border-style: none;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -521,7 +528,7 @@ border: 1px dashed red;
 }
 
 .contact form button:hover{
-  background: pink;
+  background: rgb(255, 228, 179);
   transition: all 0.3s;
 }
 
@@ -545,7 +552,7 @@ footer ul{
 
 footer ul li a{
   fill: white;
-  margin-left: 20px;
+  padding:10px;
   border-radius: 5px;
   text-align: center;
 }
